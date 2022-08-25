@@ -29,7 +29,7 @@ function traverse(list){
   
   console.log('****** linkedList-removing duplicates ******',)
 
-  // I honestly struggled with this down here the main problem I was having from my algorithm to code was that I put prev = current.next but no I need the next reference for prev to be the next reference for current
+  // I honestly struggled with this down here the main problem I was having from my algorithm to code was that I put prev = current.next but no I needed the next reference for prev to be the next reference for current
 
   // I needed help online to change prev = current.next to ---> prev.next = current.next
   while(current){
@@ -53,7 +53,7 @@ function traverse(list){
   }
 
 
-  
+
 }
 
 traverse(list);
