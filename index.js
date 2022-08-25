@@ -27,8 +27,11 @@ function traverse(list){
     linkedList = linkedList.next
   }
   
-  console.log('****** newLinkedList ******',)
+  console.log('****** linkedList-removing duplicates ******',)
 
+  // I honestly struggled with this down here the main problem I was having from my algorithm to code was that I put prev = current.next but no I need the next reference for prev to be the next reference for current
+
+  // I needed help online to change prev = current.next to ---> prev.next = current.next
   while(current){
     if(table.has(current.value)){
       prev.next = current.next
@@ -37,10 +40,20 @@ function traverse(list){
       table.add(current.value)
       prev = current;
       current = current.next;
-
-      console.log(prev.value);
     }
   }
+
+  // I didn't need to repeating anything just needed to traverse through this linked list again to prove I removed all duplicates.
+
+  // originally i was just console.logging the values as I traversed in the while loop above but I wanted extra proof that I was changing the linked list that is being passed in.
+  
+  while(list.head){
+    console.log(list.head.value);
+    list.head = list.head.next;
+  }
+
+
+  
 }
 
 traverse(list);
